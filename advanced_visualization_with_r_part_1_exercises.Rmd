@@ -1,18 +1,9 @@
 ---
 title: "advanced_visualization_with_r_part_1_exercises"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
-
-
-```{r}
-
-main_dir = "~/Applications/R/Project/advancedRViz"
-data_dir = paste0(main_dir,"/data")
-
-setwd(data_dir)
-
-```
-
 
 #### Exercise 1 ####
 # =================================================-
@@ -26,7 +17,7 @@ setwd(data_dir)
 
 # Answer: 
 ```{r}
-fast_food_data = read.csv("fast_food_data.csv",header = TRUE, stringsAsFactors = TRUE)
+fast_food_data = read.csv("data/fast_food_data.csv",header = TRUE, stringsAsFactors = TRUE)
 fast_food_subset = fast_food_data[,c(3,5,6,10,11)]
 head(fast_food_subset)
 colnames(fast_food_subset) <- c("type", "calories","totfat","carbs","sugars")
